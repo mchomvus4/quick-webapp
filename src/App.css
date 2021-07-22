@@ -30,7 +30,8 @@ nav{
   min-height: 10vh;
   align-items: center;
   font-weight: 400;
-  background:  #747f88 ;
+  background:  #376183 ;
+  border-bottom: 4px solid #376183;
   
 }
 
@@ -54,7 +55,7 @@ nav .nav-links a{
   padding-bottom: 4px;
 }
 nav .nav-links a:hover{
-  color: #33506b;
+  color: #f17725;
  
 }
 nav .burger{
@@ -72,7 +73,7 @@ nav .nav-links{
   top: 0;
   left: 0;
   height: 100vh;
-  background: #b4bfc9;
+  background: #2d4c69;
   padding: 3rem;
   width: 50%;
   transform: translateX(-50rem);
@@ -149,5 +150,39 @@ nav .nav-links a:hover{
 @media(max-width: 500px){
   .home-cards{
     grid-template-columns: 1fr;
+  }
+}
+
+/* about page */
+
+
+
+.container .about-content{
+  text-align: justify;
+}
+.main-content img{
+  width: 100%;
+  padding: 3rem 0;
+}
+.main-content{
+  display: grid;
+  width: 100%;
+  grid-template-columns: 50px, 1fr;
+  /* grid-template-columns: 1fr 2fr; */
+  grid-gap: 1rem;
+}
+.main-content p{
+  text-align: justify;
+  
+}
+@media(max-width: 700px ){
+  .main-content{
+    grid-template-columns: 1fr;
+  }
+}
+@media(max-width: 500px){
+  .about-us .quickreg{
+    font-size: 1.5rem;
+    padding-top: 1rem;
   }
 }
