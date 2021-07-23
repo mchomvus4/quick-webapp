@@ -1,9 +1,5 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
-import card1 from '../../images/pc1.png'
-import card2 from '../../images/pc2.png'
-import card3 from '../../images/pc3.png'
-import card4 from '../../images/pc4.png'
 import '../../App.css'
 const Home = () => {
   return (
@@ -22,19 +18,19 @@ const Home = () => {
      <section className="home-cards">
        
        <div>
-         <img src={card1} alt="" />
+        <img src="images/pc1.png" alt="" />
          <h3>Business Writing</h3>
        </div>
        <div>
-         <img src={card2} alt="" />
+        <img src="images/pc2.png" alt="" />
          <h3>Business Formation</h3>
        </div>
        <div>
-         <img src={card3} alt="" />
+         <img src="images/pc3.png" alt="" />
          <h3>Business Compliance</h3>
        </div>
        <div>
-         <img src={card4} alt="" />
+        <img src="images/pc4.png" alt="" />
          <h3>Business Support</h3>
        </div>
      </section>

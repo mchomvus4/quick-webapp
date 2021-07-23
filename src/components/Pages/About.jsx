@@ -1,5 +1,4 @@
 import React from 'react'
-import carbon from '../../images/banner.jpg'
 const About = () => {
   return (
     <div className="container">
@@ -10,7 +9,7 @@ const About = () => {
     </section>
     <div className="main-content">
       <div>
-        <img src={carbon} alt="" />
+        <img src="images/banner.jpg" alt="" />
       </div>
       <div>
         <p>
