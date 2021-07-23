@@ -5,35 +5,71 @@ import About from '../../components/Pages/About'
 import Service from '../Pages/Service'
 import Contact from '../Pages/Contact'
 import NotFound from '../../components/Pages/NotFound'
-import logo from '../../images/logo.png'
 import Footer from './Footer'
-import './Styles.css'
+
 
 const Navbar = () => {
- const [open, setOpen] = useState(false)
+ const [click, setClick] = useState(false);
+ const handleClick=()=>setClick(!click);
   return (
    <>
    <Router>
-    <div className="container">
-    <nav>
-      <div className="logo">
-        <img src={logo} alt="logo"/>
+    
+    <nav className="navbar">
+      <div className="nav-container">
+        <Link exact to='/' className="nav-logo">
+          <img src="images/logo.png" alt="logo" />
+
+        </Link>
+          <ul className="nav-menu">
+            <li className="nav-item active" >
+               <Link  
+               to='/' 
+                className="nav-links"
+                >
+                  Home
+              </Link>
+            </li>
+            <li className="nav-item">
+               <Link 
+                to='/about'
+                 
+                 className="nav-links"
+                 >
+                  About Us
+              </Link>
+            </li>
+            <li className="nav-item">
+               <Link 
+                to='/services'
+                 
+                 className="nav-links"
+                 >
+                  Services
+              </Link>
+            </li>
+            <li className="nav-item">
+               <Link 
+                to='/contacts'
+                 
+                 className="nav-links"
+                 >
+                  Contacts
+              </Link>
+            </li>
+          </ul>
+          <div className="nav-icon" onClick={handleClick}>
+            <i className={click ? 'fas fa-times':'fas fa-bars'}></i>
+          </div>
       </div>
-      <ul className="nav-links" style={{transform: open ? "translateX(0rem)" : ""}}>
-      <li><Link to='/' className="nav_links">Home</Link></li>
-      <li><Link to='/about' className="nav_links">About</Link></li>
-      <li><Link to='/service' className="nav_links">Services</Link></li>
-      <li><Link to='/contacts' className="nav_links">Contacts</Link></li>
-      </ul>
-      <i onClick ={()=>setOpen(!open)} className="fas fa-bars burger"></i>
     </nav>
-   </div>
+  
     <Switch>
       <Route exact path='/' component={Home}/>
       <Route  path='/about' component={About}/>
-      <Route path='/service' component={Service}/>
+      <Route  path='/service' component={Service}/>
       <Route  path='/contacts' component={Contact}/>
-      <Route path='*' component={NotFound}/>
+      <Route  path='*' component={NotFound}/>
     </Switch>
     </Router>
     <Footer/>
