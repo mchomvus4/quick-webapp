@@ -54,7 +54,7 @@ export default function Footer() {
         <li><Link to ='#'><i class="fab fa-github"></i></Link></li>
         <li><Link t0 ='#'><i class="fab fa-linkedin"></i></Link></li>
         <li><Link to ='#'><i class="fab fa-youtube"></i></Link></li>
-        <li><Link to ='https://wa.me/+255767298555'><i class="fab fa-whatsapp fa-2x"></i></Link></li>
+        <li><Link to ='https://api.whatsapp.com/send?phone=255767298555'><i class="fab fa-whatsapp fa-2x"></i></Link></li>
    </ul>
   </section>
   {/* <!-- footer legal --> */}
