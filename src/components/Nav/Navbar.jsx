@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import {BrowserRouter as Router, Switch, Route, Link} from 'react-router-dom'
+import {BrowserRouter as Router, Switch, Route, NavLink} from 'react-router-dom'
 import Home from '../../components/Pages/Home'
 import About from '../../components/Pages/About'
 import Service from '../Pages/Service'
@@ -17,45 +17,50 @@ const Navbar = () => {
     
     <nav className="navbar">
       <div className="nav-container">
-        <Link exact to='/' className="nav-logo">
+        <NavLink exact to='/' className="nav-logo">
           <img src="images/logo.png" alt="logo" />
 
-        </Link>
-          <ul className="nav-menu">
-            <li className="nav-item active" >
-               <Link  
+        </NavLink>
+          <ul className={click ? "nav-menu active" :"nav-menu"}>
+            <li className="nav-item" >
+               <NavLink  
                to='/' 
+               activeClassName="active"
                 className="nav-links"
+                onClick={handleClick}
                 >
                   Home
-              </Link>
+              </NavLink>
             </li>
             <li className="nav-item">
-               <Link 
+               <NavLink 
                 to='/about'
-                 
+                 activeClassName="active"
                  className="nav-links"
+                 onClick={handleClick}
                  >
                   About Us
-              </Link>
+              </NavLink>
             </li>
             <li className="nav-item">
-               <Link 
+               <NavLink 
                 to='/services'
-                 
+                 activeClassName="active"
                  className="nav-links"
+                 onClick={handleClick}
                  >
                   Services
-              </Link>
+              </NavLink>
             </li>
             <li className="nav-item">
-               <Link 
+               <NavLink 
                 to='/contacts'
-                 
+                 activeClassName="active"
                  className="nav-links"
+                 onClick={handleClick}
                  >
                   Contacts
-              </Link>
+              </NavLink>
             </li>
           </ul>
           <div className="nav-icon" onClick={handleClick}>

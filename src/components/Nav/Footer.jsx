@@ -54,13 +54,14 @@ export default function Footer() {
         <li><Link to ='#'><i class="fab fa-github"></i></Link></li>
         <li><Link t0 ='#'><i class="fab fa-linkedin"></i></Link></li>
         <li><Link to ='#'><i class="fab fa-youtube"></i></Link></li>
+        <li><Link to ='https://wa.me/+255767298555'><i class="fab fa-whatsapp fa-2x"></i></Link></li>
    </ul>
   </section>
   {/* <!-- footer legal --> */}
   <section className="ft-legal">
    <ul className="ft-legal-list">
-        <li><Link to='#' >Terms &amp; Conditions</Link></li>
-        <li><Link to='#' >Privacy Policy</Link></li>
+        <li><Link to='#' >Developed by</Link></li>
+        <li><Link to='#' > Samwel Mchomvu | NOTTECH Lab</Link></li>
         <li><Link to='#' >&copy; 2021 Copyright | Quick Business Reg</Link></li>
    </ul>
   </section>
